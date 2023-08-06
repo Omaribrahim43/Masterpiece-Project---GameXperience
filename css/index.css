@@ -1,0 +1,229 @@
+/* Start landing */
+/* navbar */
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Titillium Web";
+  scroll-behavior: smooth;
+  background: black;
+}
+.navbar {
+  position: fixed;
+  z-index: 1111;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.437);
+}
+.navbar-brand{
+  display: inline-block;
+}
+.navbar-brand img {
+  width: 50%;
+  
+}
+.navbar-nav ul li a {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 700;
+}
+.navbar-nav li {
+  position: relative;
+}
+.navbar-nav li::after {
+  content: "";
+  width: 0;
+  height: 4px;
+  position: absolute;
+  background: #fac710;
+  transition: 0.5s;
+}
+.navbar-nav li.active::after {
+  width: 100%;
+}
+.navbar-nav li:hover::after {
+  width: 100%;
+}
+.logSign {
+  display: flex;
+  width: 14%;
+  height: auto;
+  border: 0;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.logSign button {
+  background-color: #fac710;
+  min-width: 50%;
+  font-weight: bold;
+  height: 27px;
+  border: 0;
+  font-size: 10px;
+  color: white;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+}
+/* intro text */
+.intro {
+  position: absolute;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  top: 30%;
+  text-align: center;
+}
+.intro .intro-content {
+  display: flex;
+  font-size: 15px;
+  gap: 40px;
+}
+.intro .intro-content i {
+  color: #fac710;
+  margin-top: 5px;
+  font-size: 18px;
+}
+.intro .intro-content .content {
+  display: flex;
+  gap: 10px;
+}
+.intro .intro-text h1 {
+  font-weight: 900;
+  font-size: 62px;
+  margin: 0;
+}
+.intro .intro-text p {
+  width: 60%;
+  line-height: 1.8;
+  letter-spacing: 1px;
+  margin: auto;
+}
+.intro .intro-text button {
+  background: transparent;
+  border: 0;
+  border-bottom: 2px solid white;
+  padding: 18px;
+  color: white;
+  font-weight: bold;
+  margin-top: 50px;
+  transition: 0.5s;
+}
+.intro .intro-text button:hover {
+  color: #fac710;
+  border-bottom: 2px solid #fac710;
+}
+/* slides */
+.slides {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+}
+header .layer {
+  position: absolute;
+  background: black;
+  width: 100%;
+  height: 100vh;
+  opacity: 0.5;
+  z-index: 2;
+}
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  animation: slide-show 12s infinite;
+}
+.slide-2 {
+  animation-delay: 4s;
+}
+.slide-3 {
+  animation-delay: 8s;
+}
+.slide-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* service section */
+section {
+  height: 100vh;
+}
+section .header h1 {
+  color: transparent;
+  font-weight: 600;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
+  font-size: 88px;
+  margin: 0;
+  padding-top: 5%;
+  text-align: center;
+}
+section .header h1 span {
+  -webkit-text-stroke: 1px #fac71057;
+}
+section .header h2 {
+  font-weight: 600;
+  font-size: 62px;
+  text-align: center;
+  color: white;
+  margin-top: -50px;
+}
+section .header h2 span {
+  color: #fac710;
+}
+section .services .cards {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5%;
+}
+section .services .card {
+  background-color: black;
+  border: 0;
+  width: 30%;
+}
+section .services .card .layer {
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+section .services .card .serviceContent {
+  position: absolute;
+  color: white;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  z-index: 111;
+}
+section .services .card .serviceContent h3 {
+  font-weight: 600;
+}
+section .services .card .serviceContent button {
+  background-color: #fac710;
+  border: 0;
+  border-radius: 5px;
+  width: 50%;
+  color: white;
+  font-weight: bold;
+  padding: 6px;
+}
+/* end service section */
+/* animation */
+@keyframes slide-show {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  20%,
+  30% {
+    opacity: 1;
+    scale: 1.05;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* End landing */
