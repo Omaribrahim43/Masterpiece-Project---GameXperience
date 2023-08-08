@@ -21,7 +21,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;700;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;600;900&display=swap"
       rel="stylesheet"
     />
     <link href="https://fonts.cdnfonts.com/css/gagalin" rel="stylesheet" />
@@ -30,10 +30,14 @@
 
   <body class="vh-100 overflow">
     <!-- Start navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top">
+    <nav
+      class="navbar navbar-expand-lg navbar-dark fixed-top shadow-none border-0"
+    >
       <div class="container">
         <!-- Logo -->
-        <a class="navbar-brand fs-3" href="#">GameXperience</a>
+        <a class="logo navbar-brand fs-3" href="#"
+          >Game<span>X</span><span>perience</span>
+        </a>
         <!-- Toggle Btn -->
         <button
           class="navbar-toggler shadow-none border-0"
@@ -53,7 +57,9 @@
         >
           <!-- Sidebar header -->
           <div class="offcanvas-header text-white border-bottom">
-            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">GameXperience</h5>
+            <h5 class="logo offcanvas-title" id="offcanvasNavbarLabel">
+              Game<span>X</span><span>perience</span>
+            </h5>
             <button
               type="button"
               class="btn-close btn-close-white shadow-none"
@@ -63,7 +69,9 @@
           </div>
           <!-- Sidebar body -->
           <div class="offcanvas-body p-lg-0 d-flex flex-lg-row flex-column p-4">
-            <ul class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3">
+            <ul
+              class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3"
+            >
               <li class="nav-item mx-2">
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
               </li>
@@ -81,11 +89,13 @@
               </li>
             </ul>
             <!-- Login / Signup -->
-            <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3">
+            <div
+              class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3"
+            >
               <a href="login" class="text-white text-decoration-none">Login</a>
               <a
                 href="signup"
-                class="text-white text-decoration-none px-3 py-1 bg-primary rounded-4"
+                class="signupBtn text-black text-decoration-none px-3 py-1 rounded-4"
                 >Sign Up</a
               >
             </div>
@@ -94,8 +104,10 @@
       </div>
     </nav>
     <!-- End navbar -->
-    <header id="home" class="masthead bg-primary text-white text-center active">
-      <!-- intro text -->
+
+    <!-- Start Landing -->
+    <div class="landing-page">
+      <!-- Start intro text -->
       <div class="intro">
         <div class="intro-content">
           <div class="content content-1">
@@ -108,22 +120,18 @@
           </div>
         </div>
         <div class="intro-text">
-          <h1>
-            EXPLORE NEW GAME CENTERS <br />
-            IN YOUR AREA!
-          </h1>
-          <br />
+          <h1>EXPLORE LOUNGES IN YOUR AREA!</h1>
           <p>
             Game experience provides you all game centers around you, giving you
             the ability to book any type of devices you want to play your game
-            with, and we allow you to find any game partner in the game center
-            you will go to.
+            with.
           </p>
           <button>SEE MORE</button>
         </div>
       </div>
-      <!-- end intro text -->
-      <!-- slider -->
+      <!-- End intro text -->
+
+      <!-- Start slider -->
       <div class="slides">
         <div class="layer"></div>
         <div class="slide slide-1">
@@ -136,55 +144,14 @@
           <img src="assest/images/unreal engine.jpg" class="slide-image" />
         </div>
       </div>
-      <!-- end slider -->
-    </header>
+      <!-- End slider -->
+    </div>
     <!-- End Landing -->
-    <!-- services section -->
-    <section id="services">
-      <div class="services container">
-        <div class="header servicesHeader">
-          <h1>What <span>We Do ?</span></h1>
-          <h2>What <span>We Do ?</span></h2>
-        </div>
-        <div class="cards">
-          <div class="card card-1">
-            <img src="assest/images/services-1.jpg" />
-            <div class="serviceContent">
-              <h3>Partner</h3>
-              <p>Here you can find your gaming partner in the same place!!</p>
-              <button>MORE</button>
-            </div>
-            <div class="layer"></div>
-          </div>
-          <div class="card card-2">
-            <img src="assest/images/services-2.jpg" />
-            <div class="serviceContent">
-              <h3>Gaming center</h3>
-              <p>Here you can register in any gaming center you like!!</p>
-              <button>MORE</button>
-            </div>
-            <div class="layer"></div>
-          </div>
-          <div class="card card-3">
-            <img src="assest/images/services-3.jpg" />
-            <div class="serviceContent">
-              <h3>Devices</h3>
-              <p>Here you can choose any type of gaming device you want.</p>
-              <button>MORE</button>
-            </div>
-            <div class="layer"></div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="gameCenters">
-      <div class="gameCenters">
-        <div class="header GameCentersHeader">
-          <h1>Game <span>Centers</span></h1>
-          <h2>Game <span>Centers</span></h2>
-        </div>
-      </div>
-    </section>
+
+    <!-- Start services -->
+    
+    <!-- End services -->
+
     <!-- bootstrap javascript -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"

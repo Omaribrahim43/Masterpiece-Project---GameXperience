@@ -1,14 +1,41 @@
+:root {
+  --main-color: #fac710;
+}
 /* Start landing */
-
 * {
   box-sizing: border-box;
 }
 body {
-  font-family: "Titillium Web";
+  font-family: "Titillium Web", sans-serif;
   scroll-behavior: smooth;
-  background: black;
+  background-color: #eee;
+}
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
+body::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+body::-webkit-scrollbar-thumb {
+  background: var(--main-color);
 }
 /* Start navbar */
+.navbar {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.navbar .logo {
+  font-family: "Gagalin", sans-serif;
+}
+.navbar .logo span {
+  color: var(--main-color);
+}
+.navbar .logo span:first-child {
+  color: var(--main-color);
+  font-size: 36px;
+}
+.signupBtn {
+  background: var(--main-color);
+}
 @media (max-width: 991px) {
   .sidebar {
     background-color: rgba(255, 255, 255, 0.15);
@@ -16,40 +43,45 @@ body {
   }
 }
 /* End navbar */
+/* Start Landing page */
 /* intro text */
 .intro {
   position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   z-index: 5;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  top: 30%;
+  color: white;
   text-align: center;
 }
 .intro .intro-content {
   display: flex;
-  font-size: 15px;
+  font-size: 12px;
   gap: 40px;
+  justify-content: center;
+}
+.intro .intro-content div {
+  display: flex;
+  gap: 5px;
+}
+.intro .intro-content p {
+  margin: 0;
 }
 .intro .intro-content i {
   color: #fac710;
-  margin-top: 5px;
-  font-size: 18px;
-}
-.intro .intro-content .content {
-  display: flex;
-  gap: 10px;
+  font-size: 1rem;
 }
 .intro .intro-text h1 {
   font-weight: 900;
-  font-size: 62px;
-  margin: 0;
+  font-size: 3rem;
+  margin-bottom: 10px;
+  letter-spacing: 4px;
 }
 .intro .intro-text p {
-  width: 60%;
-  line-height: 1.8;
+  line-height: 1.6;
+  font-size: 1rem;
+  margin: 0;
   letter-spacing: 1px;
-  margin: auto;
 }
 .intro .intro-text button {
   background: transparent;
@@ -57,13 +89,53 @@ body {
   border-bottom: 2px solid white;
   padding: 18px;
   color: white;
-  font-weight: bold;
-  margin-top: 50px;
+  font-weight: 600;
+  margin-top: 40px;
   transition: 0.5s;
 }
 .intro .intro-text button:hover {
   color: #fac710;
   border-bottom: 2px solid #fac710;
+}
+/* Tablet screen */
+@media (min-width: 481px) and (max-width: 768px) {
+  .intro .intro-content p {
+    font-size: 12px;
+  }
+  .intro .intro-content i {
+    font-size: 14px;
+  }
+  .intro .intro-text h1 {
+    font-size: 2rem;
+  }
+  .intro .intro-text p {
+    font-size: 12px;
+  }
+  .intro .intro-text button {
+    padding: 12px;
+    margin-top: 30px;
+  }
+}
+/* Phone screen */
+@media (max-width: 481px) {
+  .intro .intro-content p {
+    font-size: 6px;
+  }
+  .intro .intro-content i {
+    font-size: 12px;
+  }
+  .intro .intro-text h1 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+  }
+  .intro .intro-text p {
+    font-size: 8px;
+  }
+  .intro .intro-text button {
+    padding: 8px;
+    font-size: 12px;
+  }
 }
 /* slides */
 .slides {
@@ -71,12 +143,12 @@ body {
   overflow: hidden;
   height: 100vh;
 }
-header .layer {
+.slides .layer {
   position: absolute;
   background: black;
   width: 100%;
   height: 100vh;
-  opacity: 0.5;
+  opacity: 0.7;
   z-index: 2;
 }
 .slide {
@@ -96,72 +168,6 @@ header .layer {
   height: 100%;
   object-fit: cover;
 }
-/* service section */
-section {
-  height: 100vh;
-}
-section .header h1 {
-  color: transparent;
-  font-weight: 600;
-  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
-  font-size: 88px;
-  margin: 0;
-  padding-top: 5%;
-  text-align: center;
-}
-section .header h1 span {
-  -webkit-text-stroke: 1px #fac71057;
-}
-section .header h2 {
-  font-weight: 600;
-  font-size: 62px;
-  text-align: center;
-  color: white;
-  margin-top: -50px;
-}
-section .header h2 span {
-  color: #fac710;
-}
-section .services .cards {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 5%;
-}
-section .services .card {
-  background-color: black;
-  border: 0;
-  width: 30%;
-}
-section .services .card .layer {
-  background-color: rgba(0, 0, 0, 0.4);
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-section .services .card .serviceContent {
-  position: absolute;
-  color: white;
-  background-color: black;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  width: 100%;
-  z-index: 111;
-}
-section .services .card .serviceContent h3 {
-  font-weight: 600;
-}
-section .services .card .serviceContent button {
-  background-color: #fac710;
-  border: 0;
-  border-radius: 5px;
-  width: 50%;
-  color: white;
-  font-weight: bold;
-  padding: 6px;
-}
-/* end service section */
-/* animation */
 @keyframes slide-show {
   0% {
     opacity: 0;
@@ -178,5 +184,7 @@ section .services .card .serviceContent button {
     opacity: 0;
   }
 }
+/* End Landing page */
+/* service section */
 
-/* End landing */
+/* end service section */
