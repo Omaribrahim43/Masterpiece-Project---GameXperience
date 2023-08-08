@@ -1,5 +1,5 @@
 /* Start landing */
-/* navbar */
+
 * {
   box-sizing: border-box;
 }
@@ -8,61 +8,14 @@ body {
   scroll-behavior: smooth;
   background: black;
 }
-.navbar {
-  position: fixed;
-  z-index: 1111;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.437);
+/* Start navbar */
+@media (max-width: 991px) {
+  .sidebar {
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+  }
 }
-.navbar-brand{
-  display: inline-block;
-}
-.navbar-brand img {
-  width: 50%;
-  
-}
-.navbar-nav ul li a {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-weight: 700;
-}
-.navbar-nav li {
-  position: relative;
-}
-.navbar-nav li::after {
-  content: "";
-  width: 0;
-  height: 4px;
-  position: absolute;
-  background: #fac710;
-  transition: 0.5s;
-}
-.navbar-nav li.active::after {
-  width: 100%;
-}
-.navbar-nav li:hover::after {
-  width: 100%;
-}
-.logSign {
-  display: flex;
-  width: 14%;
-  height: auto;
-  border: 0;
-  border-radius: 6px;
-  overflow: hidden;
-}
-.logSign button {
-  background-color: #fac710;
-  min-width: 50%;
-  font-weight: bold;
-  height: 27px;
-  border: 0;
-  font-size: 10px;
-  color: white;
-  position: relative;
-  z-index: 1;
-  cursor: pointer;
-}
+/* End navbar */
 /* intro text */
 .intro {
   position: absolute;
