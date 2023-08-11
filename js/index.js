@@ -1,10 +1,13 @@
-// window.addEventListener("scroll", function () {
-//   var landing = document.querySelector(".landing-page");
-//   var navbar = document.querySelector(".navbar");
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    console.log(entry);
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    } else {
+      entry.target.classList.remove("show");
+    }
+  });
+});
 
-//   if (landing.getBoundingClientRect().top <= 0) {
-//     navbar.classList.add("scrolled-background");
-//   } else {
-//     navbar.classList.remove("scrolled-background");
-//   }
-// });
+const hiddenElements = document.querySelectorAll(".hidden");
+hiddenElements.forEach((el) => observer.observe(el));
