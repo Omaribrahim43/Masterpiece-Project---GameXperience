@@ -392,6 +392,7 @@ body::-webkit-scrollbar-thumb {
   align-items: center;
   gap: 50px;
 }
+
 .search::before {
   content: "";
   width: 100%;
